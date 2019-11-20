@@ -9,14 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login_Joy"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.Chat_Seen_Joy_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.Search_Joy_Activity">
+
+        </activity>
+        <activity android:name=".ui.Notification_Joy_Activity" />
+        <activity android:name=".ui.Home_Joy_Activity"></activity>
+        <activity android:name=".ui.Personal_page_Activity" />
+        <activity android:name=".ui.Friend_Joy_Activity" />
+        <activity android:name=".ui.Sign_In_Joy_Activity" />
+        <activity android:name=".ui.Login_Joy" />
+        <activity android:name=".ui.MainActivity" />
     </application>
 
 </manifest>
