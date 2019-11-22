@@ -47,6 +47,7 @@
             android:layout_marginLeft="70dp"
             android:layout_marginTop="13dp"/>
         <EditText
+            android:id="@+id/user_login_edt"
             android:layout_width="237dp"
             android:layout_height="50dp"
             android:hint="@string/user_name"
@@ -69,6 +70,7 @@
             android:layout_marginLeft="70dp"
             android:layout_marginTop="13dp"/>
         <EditText
+            android:id="@+id/password_login_edt"
             android:layout_width="237dp"
             android:layout_height="50dp"
             android:hint="@string/key"
@@ -79,6 +81,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/login_btn"
         android:layout_width="237dp"
         android:layout_height="37dp"
         android:layout_marginStart="70dp"
@@ -95,6 +98,7 @@
        />
 
     <TextView
+        android:id="@+id/account_login_txt"
         android:textSize="14dp"
         android:layout_width="188dp"
         android:layout_height="19dp"
