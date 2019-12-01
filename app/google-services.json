@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "746615093508",
+    "firebase_url": "https://appjoychat.firebaseio.com",
+    "project_id": "appjoychat",
+    "storage_bucket": "appjoychat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746615093508:android:1877f9d771324e1068f851",
+        "android_client_info": {
+          "package_name": "haihqph05936.iris.appjoychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "746615093508-jkv0u2pofno0je0vf77oaoknsifcmb3r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "haihqph05936.iris.appjoychat",
+            "certificate_hash": "d94c2efd4a3b46720b3168ce3ebf67d88afab473"
+          }
+        },
+        {
+          "client_id": "746615093508-n4svfo6t95s5njcfgrcu9u9olh5lj8uv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD21KMHfBmopUfqIvZp5zx5h11LAfIfmxQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "746615093508-n4svfo6t95s5njcfgrcu9u9olh5lj8uv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

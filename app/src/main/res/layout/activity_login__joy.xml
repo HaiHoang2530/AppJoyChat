@@ -76,7 +76,8 @@
             android:hint="@string/key"
             android:layout_gravity="center"
             android:paddingLeft="10dp"
-            android:textColorHint="@color/hin"/>
+            android:textColorHint="@color/hin"
+            android:inputType="textPassword"/>
 
     </LinearLayout>
 

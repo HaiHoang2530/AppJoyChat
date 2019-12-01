@@ -12,7 +12,7 @@ class Login_Joy : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login__joy)
         login_btn.setOnClickListener {
-            val intent =Intent(this,Home_Joy_Activity::class.java)
+            val intent =Intent(this,Notification_Joy_Activity::class.java)
             startActivity(intent)
         }
         account_login_txt.setOnClickListener {

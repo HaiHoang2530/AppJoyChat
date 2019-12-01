@@ -75,7 +75,8 @@
             android:hint="@string/key"
             android:layout_gravity="center"
             android:paddingLeft="10dp"
-            android:textColorHint="@color/hin"/>
+            android:textColorHint="@color/hin"
+            android:inputType="textPassword"/>
 
     </LinearLayout>
     <LinearLayout
@@ -89,7 +90,7 @@
             android:layout_height="24dp"
             android:src="@drawable/phone"
             android:layout_marginLeft="70dp"
-            android:layout_marginTop="13dp"/>
+            android:layout_marginTop="13dp" />
         <EditText
             android:id="@+id/phone_sign_edt"
             android:layout_width="237dp"
@@ -97,7 +98,8 @@
             android:hint="@string/phone"
             android:layout_gravity="center"
             android:paddingLeft="10dp"
-            android:textColorHint="@color/hin"/>
+            android:textColorHint="@color/hin"
+            android:inputType="phone"/>
 
     </LinearLayout>
     <LinearLayout
@@ -119,7 +121,8 @@
             android:hint="@string/email"
             android:layout_gravity="center"
             android:paddingLeft="10dp"
-            android:textColorHint="@color/hin"/>
+            android:textColorHint="@color/hin"
+            android:inputType="textEmailAddress"/>
 
     </LinearLayout>
     <Button
