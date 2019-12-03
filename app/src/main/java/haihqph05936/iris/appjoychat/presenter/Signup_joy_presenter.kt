@@ -14,10 +14,11 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.ValueEventListener
 
 
-class Signup_joy_presenter(signup_joy_view: Signup_joy_View) {
+class Signup_joy_presenter(signup_joy_view: Signup_joy_View, databaseReference: DatabaseReference) {
 
     var signup_joy_view = signup_joy_view
-    private lateinit var database: DatabaseReference
+    private lateinit var id: String
+    var database = databaseReference
     fun validatfont(user_name: String, pass: String, phone: Int, email: String) {
         if (user_name.trim().isEmpty()) {
             signup_joy_view.error()
@@ -36,18 +37,20 @@ class Signup_joy_presenter(signup_joy_view: Signup_joy_View) {
         firebaseauth(user_name, pass, phone, email)
 
     }
+
     fun firebaseauth(user_name: String, pass: String, phone: Int, email: String) {
-        database = FirebaseDatabase.getInstance().reference
-        val usersRef = database.child("Users").child(user_name)
         val valueEventListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                val user_id_md =database.push().key.toString()
-                if (dataSnapshot.getValue()==null) {
-                    val post = dataSnapshot.child(user_id_md).getValue(User_model::class.java)
+                if (dataSnapshot.getValue() == null) {
+                    val post = dataSnapshot.getValue(User_model::class.java)
                     post?.let {
-
+                        post.user_name_md = user_name
+                        post.password_md = pass
+                        post.phone_md = phone
+                        post.email_chat_md = email
 
                     }
+
                 }
             }
 
@@ -59,7 +62,6 @@ class Signup_joy_presenter(signup_joy_view: Signup_joy_View) {
         signup_joy_view.navigateViews()
 
     }
-
 
 
 }
