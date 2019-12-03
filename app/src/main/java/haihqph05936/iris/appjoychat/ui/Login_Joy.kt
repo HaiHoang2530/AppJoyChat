@@ -16,7 +16,7 @@ class Login_Joy : AppCompatActivity() {
             startActivity(intent)
         }
         account_login_txt.setOnClickListener {
-            val intent =Intent(this,Sign_In_Joy_Activity::class.java)
+            val intent =Intent(this,Sign_up_Joy_Activity::class.java)
             startActivity(intent)
         }
     }

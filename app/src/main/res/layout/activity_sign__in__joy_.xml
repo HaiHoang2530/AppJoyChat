@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Sign_In_Joy_Activity"
+    tools:context=".ui.Sign_up_Joy_Activity"
     android:background="@drawable/ic_background">
     <ImageView
         android:id="@+id/imageView"

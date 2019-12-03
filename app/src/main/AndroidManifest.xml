@@ -16,10 +16,11 @@
 
         </activity>
         <activity android:name=".ui.Notification_Joy_Activity" />
-        <activity android:name=".ui.Home_Joy_Activity"></activity>
+        <activity android:name=".ui.Home_Joy_Activity">
+        </activity>
         <activity android:name=".ui.Personal_page_Activity" />
         <activity android:name=".ui.Friend_Joy_Activity" />
-        <activity android:name=".ui.Sign_In_Joy_Activity" />
+        <activity android:name=".ui.Sign_up_Joy_Activity" />
         <activity android:name=".ui.Login_Joy" />
         <activity android:name=".ui.MainActivity" >
             <intent-filter>
@@ -27,6 +28,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
