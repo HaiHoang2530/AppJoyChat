@@ -4,7 +4,6 @@ import android.content.ContentValues.TAG
 import android.text.style.UpdateAppearance
 import android.util.Log
 import android.widget.Toast
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.google.firebase.database.core.Context
 import haihqph05936.iris.appjoychat.model.User_model
@@ -39,26 +38,12 @@ class Signup_joy_presenter(signup_joy_view: Signup_joy_View, databaseReference: 
     }
 
     fun firebaseauth(user_name: String, pass: String, phone: Int, email: String) {
-        val valueEventListener = object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                if (dataSnapshot.getValue() == null) {
-                    val post = dataSnapshot.getValue(User_model::class.java)
-                    post?.let {
-                        post.user_name_md = user_name
-                        post.password_md = pass
-                        post.phone_md = phone
-                        post.email_chat_md = email
+        id =database.push().key.toString()
+        val Users =User_model(id,user_name,pass,phone,email,avarta_md = null,isOnline_md = false)
+        database.child(id).setValue(Users).addOnCompleteListener {
 
-                    }
-
-                }
-            }
-
-            override fun onCancelled(databaseError: DatabaseError) {
-                Log.d(TAG, databaseError.getMessage()) //Don't ignore errors!
-            }
         }
-        database.addListenerForSingleValueEvent(valueEventListener)
+
         signup_joy_view.navigateViews()
 
     }
