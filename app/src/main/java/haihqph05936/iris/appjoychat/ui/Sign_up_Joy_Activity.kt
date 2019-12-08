@@ -20,12 +20,13 @@ class Sign_up_Joy_Activity : AppCompatActivity(), Signup_joy_View {
 
 
     override fun error() {
-        Toast.makeText(this, "Vui long nhap lai!", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Vui lòng nhập lại !", Toast.LENGTH_LONG).show()
     }
 
     override fun navigateViews() {
         val intent = Intent(this, Login_Joy::class.java)
         startActivity(intent)
+        Toast.makeText(this, "Đăng Ký thành công!", Toast.LENGTH_LONG).show()
     }
 
 
@@ -40,7 +41,7 @@ class Sign_up_Joy_Activity : AppCompatActivity(), Signup_joy_View {
                 user_sgin_edt.text.toString().trim()
                 ,
                 password_sign_edt.text.toString().trim(),
-                phone_sign_edt.text.toString().trim().toInt(),
+                phone_sign_edt.text.trim().toString().toInt(),
                 email_sign_edt.text.toString().trim()
             )
 

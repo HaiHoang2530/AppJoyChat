@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="200dp"
+   android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+   android:layout_gravity="center"
+    >
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Thêm Bạn Bè"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/user_name"
+        android:gravity="center_vertical"
+        />
+    <EditText
+        android:id="@+id/edt_dialog_Them"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="users name"/>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:orientation="horizontal"
+     >
+      <Button
+          android:id="@+id/btn_Kthem_name"
+          android:textSize="20dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Không Thêm"
+          android:layout_weight="1"/>
+      <Button
+          android:id="@+id/btn_them_name"
+          android:textSize="20dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Thêm"/>
+  </LinearLayout>
+
+
+</LinearLayout>
