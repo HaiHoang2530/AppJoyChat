@@ -1,7 +1,9 @@
 package haihqph05936.iris.appjoychat.model
 
 data class Joy_chat_Model(
-    public val text_joy: String,
-    public val time: String,
-    public val sendBy: String
+    public var text_joy: String,
+    public var time: Long,
+    public var sendBy: String,
+    public var type: Int,
+    public var rec: String
 )

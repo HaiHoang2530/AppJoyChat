@@ -1,6 +1,7 @@
 package haihqph05936.iris.appjoychat.model
 
 import com.google.firebase.database.Exclude
+import java.io.Serializable
 
 
 data class User_model(
@@ -12,7 +13,7 @@ data class User_model(
     var avarta_md: String? = "",
     var isOnline_md: Boolean = false
 
-) {
+):Serializable {
     fun toMap(): Map<String, Any?> {
         return mapOf(
             "id" to user_id_md,
