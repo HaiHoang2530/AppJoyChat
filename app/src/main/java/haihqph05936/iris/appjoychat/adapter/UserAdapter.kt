@@ -44,21 +44,22 @@ class UserAdapter(
 
         holder.itemView.setOnClickListener {
             val intent = Intent(context, Chat_Seen_Joy_Activity::class.java)
-            intent.putExtra("username", users.user_name_md)
-            intent.putExtra("fcmId", users.user_id_md)
-            intent.putExtra("sender", usernsem)
-            intent.putExtra("senderfcm", idlogin)
+            intent.putExtra("username",usernsem)
+            intent.putExtra("fcmId",idlogin)
+            intent.putExtra("sender",users.user_name_md)
+            intent.putExtra("senderfcm",users.user_id_md)
             database = FirebaseDatabase.getInstance().reference.child("Messager").child(usernsem).child(
                 users.user_name_md.toString()
             )
             val postListener = object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     if (dataSnapshot.getValue()==null){
-                        val chat = Joy_chat_Model(text_joy = "",time = 0,sendBy = "",rec = "",type = 0)
-                       chat.rec= users.user_name_md.toString()
-                        chat.sendBy=usernsem
-                        database.setValue(chat,
-                            DatabaseReference.CompletionListener { databaseError, databaseReference ->
+                        val chat = Joy_chat_Model()
+                        chat.rec=users.user_name_md
+                        chat.sendBy =usernsem
+                       /*chat= users.user_name_md.toString()
+                        chat.sendBy=usernsem*/
+                        database.setValue(chat, DatabaseReference.CompletionListener { databaseError, databaseReference ->
                             })
                     }else{
 

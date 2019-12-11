@@ -1,5 +1,6 @@
 package haihqph05936.iris.appjoychat.presenter
 
+import android.util.Log
 import android.util.Patterns
 import com.google.firebase.database.*
 import haihqph05936.iris.appjoychat.model.User_model
@@ -31,6 +32,10 @@ class Signup_joy_presenter(signup_joy_view: Signup_joy_View, databaseReference: 
     }
 
     fun firebaseauth(user_name: String, pass: String, phone: Int, email: String) {
+        Log.e("log",user_name)
+        Log.e("log1",pass)
+        Log.e("log2",phone.toString())
+        Log.e("email",email)
         id = database.push().key.toString()
         val Users =
             User_model(id, user_name, pass, phone, email, avarta_md = "", isOnline_md = false)
@@ -42,6 +47,7 @@ class Signup_joy_presenter(signup_joy_view: Signup_joy_View, databaseReference: 
                         val Users =
                             User_model(id, user_name, pass, phone, email, avarta_md = "", isOnline_md = false)
                         database.child(user_name).setValue(Users).addOnCompleteListener {  }
+                        Log.e("com",user_name)
                         signup_joy_view.error()
                     }else{
                         signup_joy_view.navigateViews()
