@@ -44,7 +44,7 @@ class Chat_Adapter(
         val chat = listChat.get(position)
         //holder.txt_text_chat.text= chat.getMessageText()
         Log.e("mmm",chat.getMessageText())
-       /* holder.txt_text_chat.setText(chat.text_joy)*/
+        holder.txt_text_chat.setText(chat.text_joy)
         //holder.txt_time_chat.setText(DateFormat.format("hh:mm", chat.time))
     }
 
